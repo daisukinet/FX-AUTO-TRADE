@@ -8,6 +8,6 @@ from module import account
 
 
 def get():
-    client = oandapyV20.API(access_token=account.get_token())
-    r = accounts.AccountInstruments(accountID=account.get_id())
-    return client.request(r)
+    api = oandapyV20.API(access_token=account.get_token())
+    ai = accounts.AccountInstruments(accountID=account.get_id())
+    return api.request(ai)
